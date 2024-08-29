@@ -30,3 +30,27 @@ public struct RegisterDTO : Codable {
         self.reason = reason
     }
 }
+
+public struct GroceryCategoryRequestDTO : Codable {
+    public let title: String
+    public let colorCode: String
+    
+    public init(title: String, colorCode: String) {
+        self.title = title
+        self.colorCode = colorCode
+    }
+}
+
+public struct GroceryCategoryResponseDTO : Codable {
+    
+    public let title: String
+    public let colorCode: String
+    public let id: UUID
+    
+    
+    public init(title: String, colorCode: String, id: UUID) {
+        self.title = title
+        self.colorCode = colorCode
+        self.id = id
+    }
+}
